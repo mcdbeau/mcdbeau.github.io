@@ -1,108 +1,32 @@
-/****************
-header style
-****************/
-
-html {
-min-width: 320px;
+#alertSound {
+  display: none;
 }
 
-header {
-  font-family: 'Lato', sans-serif;
-  text-align: center;
-  width: 100%;
-  background-color: #990000;
-  padding-top: 10px;
+.btn {
+  padding: 25px 10px 25px 10px;
+  font-size: 4em;
+}
+
+.rail {
+  background-color: #b3e6ff;
   padding-bottom: 20px;
-  color: #FFFFFF;
 }
 
-/****************
-the list. 
-****************/
-
-linkslist {
-  text-align: center;
-  margin: 0 auto;
-  font-family: 'Lato', sans-serif;
-  font-size: 1em;
+.lrail {
+  border-radius: 6px 0px 0px 6px;
 }
 
-linkslist ul, li, a {
-  list-style: none;
-  text-decoration: none;
-  text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-left: -15px;
-  font-size: 1.2em;
-  font-family: 'Lato', sans-serif;
-  color: #990000;
+.rrail {
+  border-radius: 0px 6px 6px 0px;
 }
 
-linkslist p, h2 {
-  text-align: center;
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  font-size: 1.7em;
+.other { 
+  background-color: #cccccc;
+  padding-bottom: 20px;
+  border-radius: 6px;
 }
 
-
-h1 {
-  font-size: 3em;
-  font-weight: 300;
-}
-
-h2 {
-  font-size: 1.5em;
-}
-
-h3 {
-  font-size: 1.5em;
-  text-align: center;
-  font-weight: 300;
-}
-
-footer {
-  margin: 0 auto;
-  padding-top: 40px;
-  font-size: .7em;
-  clear: both;
-  text-align: center;
-}
-
-
-/****************
-responsive stuff
-****************/
-
-@media screen and (min-width: 540px) {
-  
-  /**********************************
-  TWO COLUMN LAYOUT
-  ***********************************/
-  
-  #primary {
-    width: 50%;
-    float: left;
-  }
-  
-  #secondary {
-    width: 40%;
-    float: right;
-  }
-}
-
-
-@media screen and (min-width: 900px){
-  #primary {
-    width: 28.33%;
-    float: left;
-    padding-left: 20%;
-  }
-
-  #secondary {
-    width: 28.33%;
-    float: right;
-    padding-right: 20%;
-  }
+#row4 {
+ background-color: #ffff80;
+ padding-bottom: 20px;
 }
