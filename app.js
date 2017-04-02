@@ -15,14 +15,18 @@ var times = [
   {name: 'Sanitize Utensils', id: 'utensils', time: '4h', home: '3'},
   {name: 'Leaf', id: 'leaf', time: '2h', home: '2'},
   {name: 'Cheddar Jack', id: 'ched_jack', time: '2h', home: '2'},
-  {name: 'SW Vegetables', id: 'swVeg', time: '4h', home: '2'},
-  {name: 'Limes', id: 'limes', time: '10h', home: '2'},
-  {name: 'Grape Tomatoes', id: 'grape_tom', time: '12h', home: '2'},
-  {name: 'Sliced Tomatoes', id: 'sliced_tom', time: '4h', home: '2'},
+  {name: 'Tortilla Chips', id: 'tchips', time: '12h', home: '2'},
+  {name: 'Pico De Gallo', id: 'pico', time: '4h', home: '6'},
+  {name: 'Guacamole', id: 'guac', time: '4h', home: '6'},
+  {name: 'SW Vegetables', id: 'swVeg', time: '4h', home: '6'},
+  {name: 'Limes', id: 'limes', time: '10h', home: '6'},
+  {name: 'Grape Tomatoes', id: 'grape_tom', time: '12h', home: '6'},
+  {name: 'Sliced Tomatoes', id: 'sliced_tom', time: '4h', home: '6'},
   {name: 'McGriddle 1', id: 'mcgriddle1', time: '3h', home: '4'},
   {name: 'McGriddle 2', id: 'mcgriddle2', time: '3h', home: '4'},
   {name: 'Biscuits - Now', id: 'biscuit_now', time: '15m', home: '4'},
   {name: 'Biscuits - Heat', id: 'biscuit_heat', time: '2h', home: '4'},
+  {name: 'Biscuit Butter', id: 'biscuit_butter', time: '4h', home: '4'},
   {name: 'Bacon Strips 1', id: 'bacon1', time: '4h', home: '5'},
   {name: 'Bacon Strips 2', id: 'bacon2', time: '4h', home: '5'},
   {name: 'Bacon Strips 3', id: 'bacon3', time: '4h', home: '5'},
@@ -72,11 +76,13 @@ $(document).ready(function() {
     $(this).removeClass('btn-danger btn-warning').addClass('btn-success')
   });
 // pretty up the buttons
-  $('.col-xs-2').slice(8,12).addClass('rail');
+  $('#row6').children('.col-xs-2').each(function(){
+    $(this).addClass('rail');
+    });
   $('.rail:first').addClass('lrail');
   $('.rail:last').addClass('rrail');
   $('.col-xs-2').slice(5,6).addClass('other');
-  $('.col-xs-2').slice(17,18).addClass('other');
+  $('.col-xs-2').slice(20,21).addClass('other');
 
   function warningTimers(){
       $('.timer').each(function(){ 
