@@ -31,7 +31,7 @@ var times = [
   {name: 'Bacon Strips 1', id: 'bacon1', time: '4h', home: '5'},
   {name: 'Bacon Strips 2', id: 'bacon2', time: '4h', home: '5'},
   {name: 'Bacon Strips 3', id: 'bacon3', time: '4h', home: '5'},
-  {name: 'Peppered Bacon', id: 'bacon4', time: '4h', home: '5'}
+  {name: 'Maple Bacon', id: 'bacon4', time: '4h', home: '5'}
 ]
 
 function startTimer(name, id, time, home){
