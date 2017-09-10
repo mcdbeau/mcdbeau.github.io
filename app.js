@@ -17,6 +17,7 @@ var times = [
   {name: 'Cheddar Jack', id: 'ched_jack', time: '2h', home: '2'},
   {name: 'Tortilla Chips', id: 'tchips', time: '12h', home: '2'},
   {name: 'Onion Straws', id: 'onionstrarw', time: '4h', home: '2'},
+  {name: 'Baby Greens', id: 'babyGreens', time: '2h', home: '2'},
   {name: 'Pico De Gallo', id: 'pico', time: '4h', home: '6'},
   {name: 'Guacamole', id: 'guac', time: '4h', home: '6'},
   {name: 'SW Vegetables', id: 'swVeg', time: '4h', home: '6'},
@@ -30,8 +31,7 @@ var times = [
   {name: 'Biscuit Butter', id: 'biscuit_butter', time: '4h', home: '4'},
   {name: 'Bacon Strips 1', id: 'bacon1', time: '4h', home: '5'},
   {name: 'Bacon Strips 2', id: 'bacon2', time: '4h', home: '5'},
-  {name: 'Bacon Strips 3', id: 'bacon3', time: '4h', home: '5'},
-  {name: 'Maple Bacon', id: 'bacon4', time: '4h', home: '5'}
+  {name: 'Bacon Strips 3', id: 'bacon3', time: '4h', home: '5'}
 ]
 
 function startTimer(name, id, time, home){
