@@ -79,8 +79,8 @@ $(document).ready(function() {
     });
   $('.rail:first').addClass('lrail');
   $('.rail:last').addClass('rrail');
-  $('.col-xs-2').slice(5,6).addClass('other');
-  $('.col-xs-2').slice(20,21).addClass('other');
+  $('#towels').addClass('other');
+  $('#utensils').addClass('other');
 
   function warningTimers(){
       $('.timer').each(function(){ 
