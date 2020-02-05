@@ -15,8 +15,6 @@ var times = [
   {name: 'Cheddar Jack', id: 'ched_jack', time: '2h', home: '2'},
   {name: 'Tortilla Chips', id: 'tchips', time: '12h', home: '2'},
   {name: 'SW Vegetables', id: 'swVeg', time: '4h', home: '6'},
-  {name: 'Limes', id: 'limes', time: '10h', home: '6'},
-  {name: 'Gouda', id: 'gouda', time: '4h', home: '6'},
   {name: 'Sliced Tomatoes', id: 'sliced_tom', time: '4h', home: '6'},
   {name: 'McGriddle 1', id: 'mcgriddle1', time: '3h', home: '4'},
   {name: 'McGriddle 2', id: 'mcgriddle2', time: '3h', home: '4'},
