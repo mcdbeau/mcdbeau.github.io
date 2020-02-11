@@ -18,8 +18,6 @@ var times = [
   {name: 'Sliced Tomatoes', id: 'sliced_tom', time: '4h', home: '6'},
   {name: 'McGriddle 1', id: 'mcgriddle1', time: '3h', home: '4'},
   {name: 'McGriddle 2', id: 'mcgriddle2', time: '3h', home: '4'},
-  {name: 'Biscuits - Now', id: 'biscuit_now', time: '15m', home: '4'},
-  {name: 'Biscuits - Heat', id: 'biscuit_heat', time: '2h', home: '4'},
   {name: 'Biscuit Butter', id: 'biscuit_butter', time: '4h', home: '4'},
   {name: 'Bacon Strips 1', id: 'bacon1', time: '4h', home: '5'},
   {name: 'Bacon Strips 2', id: 'bacon2', time: '4h', home: '5'},
