@@ -99,6 +99,11 @@ $(document).ready(function() {
     }
   }, 300);
 
-
+  setInterval(function(){
+    currentDate = new Date();
+    if (currentDate.getHours() > 4 && currentDate.getHours() < 11 && $('#row4').length < 1) {
+      $('#row4').remove();      
+    }
+  }, 300);
 });
 
