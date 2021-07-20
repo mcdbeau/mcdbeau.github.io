@@ -5,12 +5,12 @@ var times = [
   {name: 'Slivered Onions', id: 'sliv_onion', time: '2h', home: '1'},
   {name: 'Shredded Lettuce', id: 'shred', time: '2h', home: '1'},
   {name: 'Cheese', id: 'cheese', time: '2h', home: '1'},
-  {name: 'Check Towels', id: 'towels', time: '2h', home: '1'},
+//  {name: 'Check Towels', id: 'towels', time: '2h', home: '1'},
   {name: 'Regular Onions 2', id: 'reg_onion2', time: '4h', home: '3'},
   {name: 'Slivered Onions 2', id: 'sliv_onion2', time: '2h', home: '3'},
   {name: 'Shredded Lettuce 2', id: 'shred2', time: '2h', home: '3'},
   {name: 'Cheese 2', id: 'cheese2', time: '2h', home: '3'},
-  {name: 'Sanitize Utensils', id: 'utensils', time: '4h', home: '3'},
+//  {name: 'Sanitize Utensils', id: 'utensils', time: '4h', home: '3'},
 //  {name: 'Leaf', id: 'leaf', time: '2h', home: '2'},
 //  {name: 'Cheddar Jack', id: 'ched_jack', time: '2h', home: '2'},
 //  {name: 'Tortilla Chips', id: 'tchips', time: '12h', home: '2'},
@@ -19,7 +19,7 @@ var times = [
   {name: 'McGriddle 1', id: 'mcgriddle1', time: '3h', home: '4'},
   {name: 'McGriddle 2', id: 'mcgriddle2', time: '3h', home: '4'},
   {name: 'Biscuit Butter', id: 'biscuit_butter', time: '4h', home: '4'},
-  {name: 'Butter Warmer', id: 'muffin_butter', time: '4h', home: '4'},
+  {name: 'Butter Warmer', id: 'muffin_butter', time: '4h', home: '5'},
   {name: 'Bacon Strips 1', id: 'bacon1', time: '4h', home: '5'},
   {name: 'Bacon Strips 2', id: 'bacon2', time: '4h', home: '5'},
   {name: 'Bacon Strips 3', id: 'bacon3', time: '4h', home: '5'}
@@ -89,8 +89,16 @@ $(document).ready(function() {
 
 // watch for a product to get below thirty minutes, and change colors if so.
   setInterval(function(){
-   warningTimers()}, 300);
+    warningTimers()
+  }, 300);
 
- 
+  setInterval(function(){
+    currentDate = new Date();
+    if (currentDate.getHours() > 11 && $('#row4').length > 0) {
+      $('#row4').remove();      
+    }
+  }, 300);
+
+
 });
 
