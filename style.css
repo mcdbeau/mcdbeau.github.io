@@ -50,3 +50,15 @@ h4 {
 .row {
   text-align: top;
 }
+
+.btn-danger (
+  background-color: #AB2311;
+) 
+
+.btn-warning {
+  background-color: #FCBF29; 
+}
+
+.btn-success {
+  background-color: #007078
+}
