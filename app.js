@@ -103,7 +103,9 @@ $(document).ready(function() {
   setInterval(function(){
     currentDate = new Date();
     if (currentDate.getHours() > 4 && currentDate.getHours() < 11 && $('#row4').length < 1) {
-      $('#row4').remove();      
+      $('#mcdgriddle1').remove();
+      $('#mcdgriddle2').remove();
+      $('#biscuit_butter').remove();
     }
   }, 300);
 });
