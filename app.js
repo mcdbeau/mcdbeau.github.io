@@ -15,12 +15,15 @@ var times = [
 //  {name: 'Cheddar Jack', id: 'ched_jack', time: '2h', home: '2'},
 //  {name: 'Tortilla Chips', id: 'tchips', time: '12h', home: '2'},
   {name: 'Crinkle Pickles', id: 'crPickle', time: '4h', home: '6'},
+  {name: 'Crinkle Pickles', id: 'crPickle_airtemp', time: '2h', home: '1'},
+  {name: 'Sliced Tomatoes', id: 'sliced_tom_airtempt', time: '2h', home: '3'},
   {name: 'Sliced Tomatoes', id: 'sliced_tom', time: '4h', home: '6'},
   {name: 'McGriddle 1', id: 'mcgriddle1', time: '3h', home: '4'},
   {name: 'McGriddle 2', id: 'mcgriddle2', time: '3h', home: '4'},
   {name: 'Biscuit Butter', id: 'biscuit_butter', time: '4h', home: '4'},
   {name: 'Butter Warmer', id: 'muffin_butter', time: '4h', home: '4'},
   {name: 'Onion Shaker', id: 'shaker', time: '4h', home: '5'},
+  {name: 'Onion Shaker 2', id: 'shaker2', time: '4h', home: '5'},
   {name: 'Bacon Strips 1', id: 'bacon1', time: '4h', home: '5'},
   {name: 'Bacon Strips 2', id: 'bacon2', time: '4h', home: '5'},
   {name: 'Bacon Strips 3', id: 'bacon3', time: '4h', home: '5'}
@@ -56,7 +59,9 @@ function startTimer(name, id, time, home){
 
 function createTimers(){
   $.each(times, function(key, val){
-    startTimer(val.name, val.id, val.time, val.home)
+    if (localStorage.getItem(val.id) != "hidden"){
+      startTimer(val.name, val.id, val.time, val.home)
+    }
   }); 
 }
 
@@ -69,9 +74,9 @@ $(document).ready(function() {
     $(this).removeClass('btn-danger btn-warning').addClass('btn-success')
   });
 // pretty up the buttons
-  $('#row6').children('.col-xs-2').each(function(){
-    $(this).addClass('rail');
-    });
+//  $('#row6').children('.col-xs-2').each(function(){
+//    $(this).addClass('rail');
+//    });
   $('.rail:first').addClass('lrail');
   $('.rail:last').addClass('rrail');
   $('#towels').parent().addClass('other');
@@ -108,4 +113,44 @@ $(document).ready(function() {
       $('#biscuit_butter').remove();
     }
   }, 300);
+
+  // help functions
+
+  $('#help_open').click(function(){
+    $('#help').addClass('help');
+    $('#help').removeClass('hidden');
+  })
+  $('#help_close').click(function(){
+    $('#help').removeClass('help');
+    $('#help').addClass('hidden');
+  })
+
+  // remove timers
+
+  var timeoutId = 0;
+  var button_held_time = 0
+
+  $('.timer').on('touchstart mousedown', function() {
+      timeoutId = setTimeout(function(){
+      button_held_time = 1000 
+      }, 1000);
+  }).on('mouseup mouseleave touchend', function() {
+      if (button_held_time >= 1000) {
+        $(this).parent().remove();
+        thisID = $(this).attr('id');
+        if ($('#row6').children('div').length < 1){
+          $('#row6').remove()
+        }
+        localStorage.setItem(thisID, 'hidden');
+        console.log(thisID);
+      } 
+      clearTimeout(timeoutId);
+  });
+
+  $('#reset_settings').click(function(){
+    localStorage.clear()
+    location.reload()
+  });
+
 });
+

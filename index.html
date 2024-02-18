@@ -13,23 +13,51 @@
   <title>Prep Table Timer</title>
 </head>
 <body>
-  <div class="container-fluid">
-  <div class="row" id="row1">
+  <div class="hidden" id="help"> 
+    <span class="glyphicon glyphicon-remove" 
+      style="float: right; padding: 10px 10px 0px 0px; font-size: 2em"
+      id="help_close"></span>
+    <div style="padding-left: 20px">
+      <h1 style="text-align: center;">Help</h1>
+      <p>To remove a timer, simply tap and hold it for 1 second</p>
+      <div style="padding-top: 10px"> 
+        <span>Reset settings to default? (cannot be undone)</span>
+        <span class="glyphicon glyphicon-refresh" 
+          style="font-size: 1.2em; padding-left: 10px"
+          id="reset_settings"></span>
+
+      </div>
+    </div>
   </div>
-  <div class="row" id="row2">
+  <div class="main">
+    <div class="container-fluid">
+    <div class="row" id="row1">
+    </div>
+    <div class="row" id="row2">
+    </div>
+    <div class="row rail" id="row6">
+      <!--      <div class="location_name" style="margin: auto">
+        <div style="display: flex; justify-content: left;">
+          <span>Chilled Rail</span>
+        </div>
+      </div>
+     -->
+
+    </div>
+    <div class="row" id="row3">
+    </div>
+    <div class="row" id="row4">
+    </div>
+    <div class="row" id="row5">
+    </div>
+    <div> 
+      <audio controls id="alertSound">
+        <source type="audio/mpeg" src="alert.mp3">
+      </audio>
+    </div>
+    </div>
+    <span class="glyphicon glyphicon-question-sign"
+      style="padding: 10px 10px 0px 0px; font-size: 2em; position: fixed; bottom: 0; right: 0;"
+      id="help_open"></span> 
   </div>
-  <div class="row" id="row6">
-  </div>
-  <div class="row" id="row3">
-  </div>
-  <div class="row" id="row4">
-  </div>
-  <div class="row" id="row5">
-  </div>
-  <div> 
-    <audio controls id="alertSound">
-      <source type="audio/mpeg" src="alert.mp3">
-    </audio>
-  </div>
-</div>
 </body>
