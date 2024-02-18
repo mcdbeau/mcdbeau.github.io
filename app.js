@@ -144,6 +144,7 @@ $(document).ready(function() {
         localStorage.setItem(thisID, 'hidden');
         console.log(thisID);
       } 
+      button_held_time = 0
       clearTimeout(timeoutId);
   });
 
