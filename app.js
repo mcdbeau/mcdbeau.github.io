@@ -77,8 +77,7 @@ $(document).ready(function() {
 //  $('#row6').children('.col-xs-2').each(function(){
 //    $(this).addClass('rail');
 //    });
-  $('.rail:first').addClass('lrail');
-  $('.rail:last').addClass('rrail');
+
   $('#towels').parent().addClass('other');
   $('#utensils').parent().addClass('other');
 

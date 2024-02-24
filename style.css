@@ -37,16 +37,8 @@ h4 {
 
 .rail {
   background-color: #b3e6ff;
-  padding-bottom: 20px;
 }
 
-.lrail {
-  border-radius: 6px 0px 0px 6px;
-}
-
-.rrail {
-  border-radius: 0px 6px 6px 0px;
-}
 
 .other { 
   background-color: #cccccc;
@@ -56,13 +48,21 @@ h4 {
 
 #row4 {
  background-color: #ffff80;
- padding-bottom: 20px;
 }
 
 .row {
   text-align: top;
   display: flex;
   justify-content: center;
+  padding-bottom: 20px;
+}
+
+#row1 {
+  background: #4444;
+}
+
+#row3 { 
+  background: #2222;
 }
 
 .btn-danger {
