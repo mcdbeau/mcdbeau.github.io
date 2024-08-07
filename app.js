@@ -4,11 +4,13 @@ var times = [
   {name: 'Regular Onions', id: 'reg_onion', time: '4h', home: '1'},
   {name: 'Slivered Onions', id: 'sliv_onion', time: '2h', home: '1'},
   {name: 'Shredded Lettuce', id: 'shred', time: '2h', home: '1'},
+  {name: 'Pickles', id: 'reg_pickles1', time: '24h', home: '1'},
   {name: 'Cheese', id: 'cheese', time: '4h', home: '1'},
 //  {name: 'Check Towels', id: 'towels', time: '2h', home: '1'},
   {name: 'Regular Onions 2', id: 'reg_onion2', time: '4h', home: '3'},
   {name: 'Slivered Onions 2', id: 'sliv_onion2', time: '2h', home: '3'},
   {name: 'Shredded Lettuce 2', id: 'shred2', time: '2h', home: '3'},
+  {name: 'Pickles 2', id: 'reg_pickles2', time: '24h', home: '3'},
   {name: 'Cheese 2', id: 'cheese2', time: '4h', home: '3'},
 //  {name: 'Sanitize Utensils', id: 'utensils', time: '4h', home: '3'},
 //  {name: 'Leaf', id: 'leaf', time: '2h', home: '2'},
@@ -26,7 +28,9 @@ var times = [
   {name: 'Onion Shaker 2', id: 'shaker2', time: '4h', home: '5'},
   {name: 'Bacon Strips 1', id: 'bacon1', time: '4h', home: '5'},
   {name: 'Bacon Strips 2', id: 'bacon2', time: '4h', home: '5'},
-  {name: 'Bacon Strips 3', id: 'bacon3', time: '4h', home: '5'}
+  {name: 'Bacon Strips 3', id: 'bacon3', time: '4h', home: '5'},
+  {name: 'Bacon Strips 4', id: 'bacon4', time: '4h', home: '5'},
+  {name: 'Bacon Strips 5', id: 'bacon5', time: '4h', home: '5'}
 ]
 
 function startTimer(name, id, time, home){
@@ -67,6 +71,10 @@ function createTimers(){
 
 $(document).ready(function() {
   createTimers(); 
+ 
+  if ($('#row6').children().length == 0) {
+    $('#row6').remove()
+  }
 // reset the timer states on click
   $('.timer').click(function(event){
     var timerID = event.target.id;
@@ -128,12 +136,14 @@ $(document).ready(function() {
 
   var timeoutId = 0;
   var button_held_time = 0
+  var start_time = 0
 
   $('.timer').on('touchstart mousedown', function() {
+      start_time = Date.now()
       timeoutId = setTimeout(function(){
-      button_held_time = 1000 
-      }, 1000);
-  }).on('mouseup mouseleave touchend', function() {
+      }, 2000);
+  }).on('mouseup touchend', function() {
+      button_held_time = Date.now() - start_time
       if (button_held_time >= 1000) {
         $(this).parent().remove();
         thisID = $(this).attr('id');
