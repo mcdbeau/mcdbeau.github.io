@@ -26,11 +26,13 @@ var times = [
   {name: 'Butter Warmer', id: 'muffin_butter', time: '4h', home: '4'},
   {name: 'Onion Shaker', id: 'shaker', time: '4h', home: '5'},
   {name: 'Onion Shaker 2', id: 'shaker2', time: '4h', home: '5'},
+  {name: 'Bacon Table', id: 'bacon_table', time: '4h', home: '2'},
   {name: 'Bacon Strips 1', id: 'bacon1', time: '4h', home: '5'},
   {name: 'Bacon Strips 2', id: 'bacon2', time: '4h', home: '5'},
   {name: 'Bacon Strips 3', id: 'bacon3', time: '4h', home: '5'},
   {name: 'Bacon Strips 4', id: 'bacon4', time: '4h', home: '5'},
   {name: 'Bacon Strips 5', id: 'bacon5', time: '4h', home: '5'}
+
 ]
 
 function startTimer(name, id, time, home){
